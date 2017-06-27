@@ -1,0 +1,40 @@
+import React from 'react';
+import { TabBar, Tab } from 'native-navigation';
+
+export default class nativeNavigationTests extends Component {
+  render() {
+    return (
+      <View>
+        <Text>
+          Testing native-navigation Tabs
+        </Text>
+      </View>
+      <TabBar
+        elevation={20}
+      >
+        <Tab
+          route={'ScreenOne'}
+          title="Home"
+          //image={require('../icons/home.png')}
+        />
+        <Tab
+          route={'ScreenOne'}
+          title="Chat"
+          //image={require('../icons/chat.png')}
+        />
+        <Tab
+          route={'ScreenOne'}
+          title="Data"
+          //image={require('../icons/backup.png')}
+        />
+        <Tab
+          route={'ScreenOne'}
+          title="Settings"
+          //image={require('../icons/settings.png')}
+        />
+      </TabBar>
+    );
+  }
+}
+
+AppRegistry.registerComponent('nativeNavigationTests', () => nativeNavigationTests);

@@ -1,0 +1,48 @@
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+import Navigator, { TabBar, Tab } from 'native-navigation';
+
+export default class TabScreen extends Component {
+  render() {
+    return (
+      <TabBar
+        elevation={20}
+      >
+        <Tab
+          route={'ScreenOne'}
+          title="Home"
+          //image={require('../icons/home.png')}
+        />
+        <Tab
+          route={'ScreenOne'}
+          title="Chat"
+          //image={require('../icons/chat.png')}
+        />
+        <Tab
+          route={'ScreenOne'}
+          title="Data"
+          //image={require('../icons/backup.png')}
+        />
+        <Tab
+          route={'ScreenOne'}
+          title="Settings"
+          //image={require('../icons/settings.png')}
+        />
+      </TabBar>
+    );
+  }
+}
+
+Navigator.registerScreen(
+  'TabScreen',
+  {
+    mode: 'tabs',
+  }
+);
+
+AppRegistry.registerComponent('nativeNavigationTests', () => nativeNavigationTests);
